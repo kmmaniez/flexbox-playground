@@ -56,3 +56,79 @@ h1{
     display: flex;
     flex-direction: column;
 }
+
+/* Container */
+.container{
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    padding: 24px 18px;
+    position: relative;
+    border: 6px dashed var(--salmon);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+.container::before{
+    content: 'Container flexbox max-width: 800px; height: 600px;';
+    font-style: italic;
+    font-weight: 400;
+    top: 0;
+    padding-top: 8px;
+    padding-left: 8px;
+    left:  0;
+    font-size: 1.25rem;
+    opacity: 0.5;
+    position: absolute;
+}
+.container .box{
+    flex-shrink: 0;
+    width: 150px;
+    height: 200px;
+    padding: 4px;
+    background-color: var(--dark-light);
+    position: relative;
+    z-index: 1;
+    border-radius: 16px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+    gap: 8px;
+
+    cursor: pointer;
+}
+.container .box.child{
+    background-color: transparent;
+    border: 3px dashed var(--dark);
+}
+.container .box.child:hover{
+    background-color: transparent;
+    border: 4px dashed var(--dark);
+}
+.container .box:hover{
+    transform: translateY(-4px);
+    transition: transform 200ms ease;
+    background-color: var(--dark);
+}
+.container .box p{
+    color: var(--dark);
+    font-size: 1.25rem;
+    padding: 4px;
+    background-color: var(--white);
+    border-radius: 4px;
+}
+.container .box:nth-child(2) p{
+    background-color: var(--light-blue);
+}
+.container .box:nth-child(3) p{
+    background-color: var(--salmon);
+}
+.container .box:nth-child(5) p{
+    background-color: var(--green);
+}
