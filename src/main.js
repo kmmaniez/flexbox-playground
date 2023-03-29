@@ -1,11 +1,18 @@
 /* Container */
-const container             = document.querySelector('.container')
+const container             = document.querySelector('.container');
+const containerChild        = document.querySelectorAll('.box.child');
 
 /* Flex Container Item */
 const flexDirectionBox      = document.querySelectorAll('.direction');
 const flexContentBox        = document.querySelectorAll('.flexcontent');
 const flexItemsBox          = document.querySelectorAll('.flexitems');
 const flexWrapBox           = document.querySelectorAll('.flexwrap');
+
+/* Flex Child Item*/
+const childFlexDirectionBox = document.querySelectorAll('.fcdirection');
+const childFlexContentBox   = document.querySelectorAll('.fcflexcontent');
+const childFlexItemsBox     = document.querySelectorAll('.fcflexitems');
+
 
 /* Flex container item event */
 flexDirectionBox.forEach(item => {
