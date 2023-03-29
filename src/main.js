@@ -43,6 +43,31 @@ flexWrapBox.forEach(item => {
     })
 })
 
+/* Flex child item & child event*/
+containerChild.forEach(childFlex => {
+
+    childFlexDirectionBox.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const {id} = e.target
+            switchFlex(id, childFlex)
+        })
+    })
+
+    childFlexContentBox.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const {id} = e.target
+            switchFlex(id, childFlex)
+        })
+    })
+    
+    childFlexItemsBox.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const {id} = e.target
+            switchFlex(id, childFlex)
+        })
+    })
+
+})
 
 /* Function switch flex property (parent/child) */
 function switchFlex(id) {
