@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Playground</title>
+    <link rel="stylesheet" href="./src/main.css">
+
+</head>
+<body>
+    <section class="playground">
+        <h1>Flexbox Playground</h1>
+        
+        <div class="app">
+            <aside>
+                <div class="menu">
+                    <h1>Container Flexbox Configuration</h1>
+                    <div class="list">
+
+                        <div class="category">
+                            <label for="direction" id="categorylabel">Flex direction</label>
+
+                            <div class="form-group">
+                                <input type="radio" class="direction" name="direction" id="row">
+                                <label for="row">Row</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="direction" name="direction" id="rowrev">
+                                <label for="rowrev">Row reverse</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="direction" name="direction" id="col">
+                                <label for="col">Column</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="direction" name="direction" id="colrev">
+                                <label for="colrev">Column reverse</label>
+                            </div>
+
+                        </div>
+                        
+                        <div class="category">
+                            <label for="content" id="categorylabel">Justify content</label>
+
+                            <div class="form-group">
+                                <input type="radio" class="flexcontent" name="content" id="start">
+                                <label for="start">Flex start</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="flexcontent" name="content" id="end">
+                                <label for="end">Flex end</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="flexcontent" name="content" id="between">
+                                <label for="between">Space between</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="flexcontent" name="content" id="around">
+                                <label for="around">Space around</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="flexcontent" name="content" id="evenly">
+                                <label for="evenly">Space evenly</label>
+                            </div>
+
+                        </div>
+                        
+                        <div class="category">
+                            <label for="items" id="categorylabel">Align items</label>
+                            
+                            <div class="form-group">
+                                <input type="radio" class="flexitems" name="items" id="flexs">
+                                <label for="flexs">Flex start</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="flexitems" name="items" id="flexe">
+                                <label for="flexe">Flex end</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="flexitems" name="items" id="center">
+                                <label for="center">Center</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="flexitems" name="items" id="flexstretch">
+                                <label for="flexstretch">Stretch (won't work, size box is fixed!)</label>
+                            </div>
+
+                        </div>
+                        
+                        <div class="category">
+                            <label for="wrap" id="categorylabel">Flex wrap</label>
+
+                            <div class="form-group">
+                                <input type="radio" class="flexwrap" name="wrap" id="nowrap">
+                                <label for="nowrap">Nowrap</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="flexwrap" name="wrap" id="wrap">
+                                <label for="wrap">Wrap</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="flexwrap" name="wrap" id="wraprev">
+                                <label for="wraprev">Wrap reverse</label>
+                            </div>
+
+                        </div>
+        
+                    </div>
+                </div>
+        
+                <div class="menu">
+                    <h1>Flexbox Child Container Content Configuration</h1>
+                    <div class="list">
+
+                        <div class="category">
+                            <label for="fcdirection" id="categorylabel">Flex direction</label>
+
+                            <div class="form-group">
+                                <input type="radio" class="fcdirection" name="fcdirection" id="fcrow">
+                                <label for="fcrow">Row</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="fcdirection" name="fcdirection" id="fcrowrev">
+                                <label for="fcrowrev">Row reverse</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="fcdirection" name="fcdirection" id="fccol">
+                                <label for="fccol">Column</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="fcdirection" name="fcdirection" id="fccolrev">
+                                <label for="fccolrev">Column reverse</label>
+                            </div>
+
+                        </div>
+                        
+                        <div class="category">
+                            <label for="fccontent" id="categorylabel">Justify content</label>
+
+                            <div class="form-group">
+                                <input type="radio" class="fcflexcontent" name="fccontent" id="fcstart">
+                                <label for="fcstart">Flex start</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="fcflexcontent" name="fccontent" id="fcend">
+                                <label for="fcend">Flex end</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="fcflexcontent" name="fccontent" id="fcbetween">
+                                <label for="fcbetween">Space between</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="fcflexcontent" name="fccontent" id="fcaround">
+                                <label for="fcaround">Space around</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="fcflexcontent" name="fccontent" id="fcevenly">
+                                <label for="fcevenly">Space evenly</label>
+                            </div>
+        
+                        </div>
+                        
+                        <div class="category">
+                            <label for="fcitems" id="categorylabel">Align items</label>
+                            
+                            <div class="form-group">
+                                <input type="radio" class="fcflexitems" name="fcitems" id="fcflexs">
+                                <label for="fcflexs">Flex start</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="fcflexitems" name="fcitems" id="fcflexe">
+                                <label for="fcflexe">Flex end</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="fcflexitems" name="fcitems" id="fccenter">
+                                <label for="fccenter">Center</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="radio" class="fcflexitems" name="fcitems" id="fcstretch">
+                                <label for="fcstretch">Stretch</label>
+                            </div>
+
+                        </div>
+        
+                    </div>    
+                </div>
+            </aside>
+            
+        </div>
+
+    </section>
+    
+</body>
+
+    <script src="./src/main.js"></script>
+
+</html>
