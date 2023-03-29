@@ -69,8 +69,9 @@ containerChild.forEach(childFlex => {
 
 })
 
+
 /* Function switch flex property (parent/child) */
-function switchFlex(id) {
+function switchFlex(id, flexItem = null) {
     switch (id) {
 
     // 1. FLEX CONTAINER
@@ -121,7 +122,7 @@ function switchFlex(id) {
         case 'flexr':
             container.style.alignItems = 'right';
             break;
-        case 'flexstretch':
+        // case 'flexstretch':
             container.style.alignItems = 'stretch';
             break;
 
@@ -136,6 +137,58 @@ function switchFlex(id) {
             container.style.flexWrap = 'wrap-reverse';
             break;
     
+    // 2. FLEX CHILD CONTAINER
+        /* Flex direction */
+        case 'fcrow':
+            flexItem.style.flexDirection = 'row';
+            break;
+        case 'fcrowrev':
+            flexItem.style.flexDirection = 'row-reverse';
+            break;
+        case 'fccol':
+            flexItem.style.flexDirection = 'column';
+            break;
+        case 'fccolrev':
+            flexItem.style.flexDirection = 'column-reverse';
+            break;
+            
+        /* Justify content */
+        case 'fcbetween':
+            flexItem.style.justifyContent = 'space-between';
+            break;
+        case 'fcaround':
+            flexItem.style.justifyContent = 'space-around';
+            break;
+        case 'fcevenly':
+            flexItem.style.justifyContent = 'space-evenly';
+            break;
+        case 'fcstart':
+            flexItem.style.justifyContent = 'start';
+            break;
+        case 'fcend':
+            flexItem.style.justifyContent = 'end';
+            break;
+
+        /* Align items */
+        case 'fccenter':
+            flexItem.style.alignItems = 'center';
+            break;
+        case 'fcflexs':
+            flexItem.style.alignItems = 'start';
+            break;
+        case 'fcflexe':
+            flexItem.style.alignItems = 'end';
+            break; 
+        case 'fcflexl':
+            flexItem.style.alignItems = 'left';
+            break;
+        case 'fcflexr':
+            flexItem.style.alignItems = 'right';
+            break;
+        case 'fcstretch':
+            flexItem.style.alignItems = 'stretch';
+            break;
+
         default:
             break;
     }
